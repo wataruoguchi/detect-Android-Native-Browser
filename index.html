@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample</title>
+  <style>
+    .messageForAndroidDevice {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  This is a sample. Please test by changing user Agent.
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="./jQuery.detectAndroidNativeBrowser.js"></script>
+  <script>
+    if($("html").isAndroidNativeBrowser()) {
+      $("html").append("<div class='messageForAndroidDevice'>Sorry, we no longer support Android Native Browser. Please access by Chrome. Thank you for visiting.</div>");
+    }
+  </script>
+</body>
+</html>
